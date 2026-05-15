@@ -23,3 +23,11 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 自定义JWT配置
+security:
+  jwt:
+    # 签名密钥（随便写，越长越安全）
+    secret: demo-jwt-secret-key-for-spring-security-2026
+    # 过期时间：2小时=7200000毫秒
+    expiration-millis: 7200000

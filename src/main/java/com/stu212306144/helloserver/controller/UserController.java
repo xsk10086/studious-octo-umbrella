@@ -25,7 +25,7 @@ public class UserController {
     @PostMapping("/login")
     public Result<String> login(@RequestBody SysUser user) {
         // 这里写简单的返回逻辑即可，实验用不用写校验都可以
-        return Result.success("登录成功！欢迎：" + user.getUsername());
+        return userService.login(user);
     }
 
     // 你原来的用户详情接口（实验要求拦截）
